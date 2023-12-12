@@ -19,6 +19,10 @@ app.use(express.urlencoded({extended:true}))
 
 // Routes
 app.use('/api/goals', require('./routes/goalRoutes'))
+app.use('/api/articles', require('./routes/articleRoutes'))
+app.use('/api/users', require('./routes/userRoutes'))
+app.use('/api/comments', require('./routes/commentRoutes'))
+app.use('/api/tags', require('./routes/tagRoutes'))
 
 app.listen(port, () => {
     console.log(`Server started on ${port}`)

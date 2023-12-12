@@ -8,15 +8,15 @@ const getGoals = asyncHandler(async (req, res) => {
 })
 
 const getGoal = asyncHandler(async (req, res) => {
-    const goal = await GoalModel.findById(req.params.id);
+    const goal = await GoalModel.findById(req.params.id)
 
     if (!goal) {
         res.status(404);
-        throw new Error('Goal not found');
+        throw new Error('Goal not found')
     }
 
-    res.status(200).json(goal);
-});
+    res.status(200).json(goal)
+})
 
 const addGoal = asyncHandler(async (req, res) => {
     if (!req.body.text) {
